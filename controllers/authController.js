@@ -17,7 +17,8 @@ exports.register = async (req, res) => {
     });
     res.status(201).json({ token });
   } catch (err) {
-    res.status(500).json({ error: "Server error" });
+    // console.log(err);
+    res.status(500).json({ error: err });
   }
 };
 
